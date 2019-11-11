@@ -47,7 +47,8 @@ public class Main {
 
         String base = "java";
         String cpOpcion = "-cp";
-        String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\PSP";
+        //String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\PSP";
+        String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\classes";
         String claseInvertir = "Ej15.Invertir";
 
         ProcessBuilder processBuilder = new ProcessBuilder();

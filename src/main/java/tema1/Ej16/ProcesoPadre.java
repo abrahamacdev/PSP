@@ -35,7 +35,9 @@ public class ProcesoPadre {
 
         String base = "java";
         String opClasspath = "-cp";
-        String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\PSP";
+        //String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\PSP";
+        String cpValor = "E:\\Datos\\2_DAM_A_NO_SYNC\\PSP\\out\\production\\classes\\tema1";
+
 
         ProcessBuilder processBuilderPrimero = new ProcessBuilder();
         processBuilderPrimero.command(base,opClasspath,cpValor,programas[0]);

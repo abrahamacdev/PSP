@@ -3,12 +3,21 @@ package tema2.ej3;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * La solución propuesta en este ejercicio NO DEBE DE IMPLEMENTARSE EN UNA SOLUCIÓN REAL porque crear una "espera activa"
+ * El hilo main está en un bucle continuo que no acaba hasta que se cumple la condición, esto provoca un alto uso de la
+ * CPU con el consecuente drenado de rendimiento que conlleva.
+ * Una solución más correcta sería crear un hilo demonio que estuviese mostrando el mensaje "Calculando #barrita", de esta forma
+ * el hilo principal no estaría comprobando continuamente que todos los hilos hallan completado el cálculo.
+ */
 public class SumadorConRuedecita {
 
     public static void main(String[] args){
 
         HashMap<Long, Integer> hiloConRespuesta = new HashMap<>();
         ArrayList<Long> terminados = new ArrayList<>();
+
+        Thread padre = Thread.currentThread();
 
         for (String arg : args){
 
@@ -20,6 +29,7 @@ public class SumadorConRuedecita {
                     public void onNewNumberCalculated(int number, long idHilo) {
                         hiloConRespuesta.replace(idHilo,number);
                         terminados.add(idHilo);
+
                     }
                 });
 
