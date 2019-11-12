@@ -1,0 +1,8 @@
+1. Crear bien el método main en el hijo (public static void main(String[] args))
+
+2. Antes de ejecutar el programa directamente desde el IDE, utilizar la terminal
+y comprobar que la ruta del classpath (-cp) apunta correctamente a la dirección en la que
+comienza a declararse el paquete en la clase, es decir, el directorio anterior al primer directorio
+del package.
+
+3. MUY MUY IMPORTANTE utilizar siempre el mismo lector/escritor para los streams tanto en el padre como en el hijo
